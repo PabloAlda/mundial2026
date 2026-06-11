@@ -2,6 +2,9 @@
 // QUINIELA MUNDIAL 2026 - App Logic
 // =========================================
 
+function parseTwemoji() {
+  if (typeof twemoji !== 'undefined') twemoji.parse(document.body);
+}
 const STATE = {
   groupName: "",
   playerName: "",
@@ -73,6 +76,7 @@ function renderTabs() {
     btn.innerHTML = `GRUPO ${g.id} <span class="tab-badge"></span>`;
     btn.addEventListener('click', () => switchGroup(i));
     nav.appendChild(btn);
+     parseTwemoji();
   });
 }
 
@@ -114,6 +118,7 @@ function renderGroup(index) {
   });
 
   container.appendChild(section);
+  parseTwemoji();
 }
 
 function buildMatchCard(match) {
