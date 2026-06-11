@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiniela Mundial 2026 🏆</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- PANTALLA BIENVENIDA -->
+  <div id="screen-welcome" class="screen active">
+    <div class="welcome-bg">
+      <div class="trophy-bg">🏆</div>
+    </div>
+    <div class="welcome-content">
+      <div class="logo-area">
+        <span class="logo-icon">⚽</span>
+        <h1 class="logo-title">QUINIELA<br><span>MUNDIAL 2026</span></h1>
+      </div>
+      <p class="welcome-sub">Predice los resultados de la fase de grupos.<br>¿Quién conoce mejor el fútbol?</p>
+
+      <div class="group-setup card">
+        <label class="field-label">Nombre de tu grupo</label>
+        <input type="text" id="group-name" class="field-input" placeholder="Ej: Los Cracks de Whatsapp" maxlength="40" />
+
+        <label class="field-label mt">Tu nombre</label>
+        <input type="text" id="player-name" class="field-input" placeholder="Ej: Carlos" maxlength="25" />
+
+        <button class="btn-primary" id="btn-start">Empezar a predecir →</button>
+
+        <div class="divider">o</div>
+        <button class="btn-secondary" id="btn-load">Cargar quiniela guardada</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANTALLA PRINCIPAL DE PREDICCIONES -->
+  <div id="screen-main" class="screen">
+    <header class="app-header">
+      <div class="header-left">
+        <span class="header-trophy">⚽</span>
+        <div>
+          <div class="header-title" id="header-group-name">Mi Quiniela</div>
+          <div class="header-player" id="header-player-name"></div>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="progress-pill">
+          <span id="progress-text">0/104</span>
+        </div>
+        <button class="btn-icon" id="btn-menu">☰</button>
+      </div>
+    </header>
+
+    <!-- TABS DE GRUPOS -->
+    <nav class="group-tabs" id="group-tabs">
+      <!-- generado por JS -->
+    </nav>
+
+    <!-- CONTENIDO DE GRUPO -->
+    <main class="matches-container" id="matches-container">
+      <!-- generado por JS -->
+    </main>
+
+    <!-- FOOTER ACCIONES -->
+    <footer class="app-footer">
+      <button class="btn-footer" id="btn-prev">← Anterior</button>
+      <button class="btn-footer btn-save" id="btn-save-share">💾 Guardar y compartir</button>
+      <button class="btn-footer" id="btn-next">Siguiente →</button>
+    </footer>
+  </div>
+
+  <!-- PANEL MENÚ -->
+  <div id="menu-panel" class="menu-panel hidden">
+    <div class="menu-overlay" id="menu-overlay"></div>
+    <div class="menu-drawer">
+      <h3 class="menu-title">Opciones</h3>
+      <ul class="menu-list">
+        <li><button onclick="showScreen('welcome')">🏠 Inicio</button></li>
+        <li><button id="btn-export-json">📤 Exportar quiniela</button></li>
+        <li><button id="btn-reset-picks">🗑️ Borrar predicciones</button></li>
+        <li><button id="btn-compare">👥 Comparar con amigos</button></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- MODAL GUARDAR/COMPARTIR -->
+  <div id="modal-share" class="modal hidden">
+    <div class="modal-backdrop" id="share-backdrop"></div>
+    <div class="modal-box">
+      <h3 class="modal-title">🎉 ¡Quiniela guardada!</h3>
+      <p class="modal-sub">Comparte este código con tus amigos para comparar predicciones.</p>
+      <div class="share-code-block">
+        <textarea id="share-code" class="share-code" readonly rows="4"></textarea>
+        <button class="btn-copy" id="btn-copy-code">📋 Copiar código</button>
+      </div>
+      <p class="modal-hint">Tus amigos deben pegar el código en "Cargar quiniela guardada"</p>
+      <div class="modal-actions">
+        <button class="btn-whatsapp" id="btn-whatsapp">📱 Enviar por WhatsApp</button>
+        <button class="btn-secondary small" id="btn-close-modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL COMPARAR -->
+  <div id="modal-compare" class="modal hidden">
+    <div class="modal-backdrop" id="compare-backdrop"></div>
+    <div class="modal-box wide">
+      <h3 class="modal-title">👥 Comparar quinielas</h3>
+      <p class="modal-sub">Pega el código de un amigo para ver en qué coincidís.</p>
+      <textarea id="compare-input" class="share-code" rows="4" placeholder="Pega el código aquí..."></textarea>
+      <button class="btn-primary mt" id="btn-do-compare">Comparar</button>
+      <div id="compare-result" class="compare-result hidden"></div>
+      <button class="btn-secondary small mt" id="btn-close-compare">Cerrar</button>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
