@@ -100,14 +100,14 @@ const GROUPS = [
       { name: "Países Bajos", flag: "🇳🇱" },
       { name: "Japón", flag: "🇯🇵" },
       { name: "Túnez", flag: "🇹🇳" },
-      { name: "Senegal", flag: "🇸🇳" }, // ← Senegal está en Grupo I; aquí era playoff europeo → se pone el equipo confirmado
+      { name: "Suecia", flag: "🇸e" }, // ← Senegal está en Grupo I; aquí era playoff europeo → se pone el equipo confirmado
     ],
     matches: [
       { id: "F1", home: { name: "Países Bajos", flag: "🇳🇱" }, away: { name: "Japón", flag: "🇯🇵" }, date: "14 Jun" },
-      { id: "F2", home: { name: "Túnez", flag: "🇹🇳" }, away: { name: "Senegal", flag: "🇸🇳" }, date: "14 Jun" },
+      { id: "F2", home: { name: "Túnez", flag: "🇹🇳" }, away: { name: "Suecia", flag: "🇸e" }, date: "14 Jun" },
       { id: "F3", home: { name: "Países Bajos", flag: "🇳🇱" }, away: { name: "Túnez", flag: "🇹🇳" }, date: "19 Jun" },
-      { id: "F4", home: { name: "Japón", flag: "🇯🇵" }, away: { name: "Senegal", flag: "🇸🇳" }, date: "19 Jun" },
-      { id: "F5", home: { name: "Países Bajos", flag: "🇳🇱" }, away: { name: "Senegal", flag: "🇸🇳" }, date: "23 Jun" },
+      { id: "F4", home: { name: "Japón", flag: "🇯🇵" }, away: { name: "Suecia", flag: "🇸e" }, date: "19 Jun" },
+      { id: "F5", home: { name: "Países Bajos", flag: "🇳🇱" }, away: { name: "Suecia", flag: "🇸e" }, date: "23 Jun" },
       { id: "F6", home: { name: "Japón", flag: "🇯🇵" }, away: { name: "Túnez", flag: "🇹🇳" }, date: "23 Jun" },
     ],
   },
